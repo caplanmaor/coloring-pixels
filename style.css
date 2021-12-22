@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  height: 100vh;
+}
+#control-panel {
+  background-color: gray;
+  display: grid;
+  height: 100%;
+  width: 30%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  gap: 5px;
+}
+
+#clearbtn {
+  grid-column: span 3;
+  margin: 20px;
+}
+
+#pixel-grid {
+  display: grid;
+  width: 70%;
+  height: 100%;
+  grid-template-columns: repeat(60, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+}
+
+.pixel {
+  border: black solid 1px;
+}
