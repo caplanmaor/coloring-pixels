@@ -36,7 +36,7 @@ function createPixelGrid() {
   while (i > 0) {
     let pixel = document.createElement("div");
     pixel.classList.add("pixel");
-    pixel.addEventListener("mousedown", setIsClickedOn);
+    // pixel.addEventListener("mousedown", setIsClickedOn);
     pixel.addEventListener("mousedown", fillColor);
     pixel.addEventListener("mouseup", setIsClickedOff);
     pixel.addEventListener("mouseover", checkIfClicked);
@@ -49,9 +49,9 @@ function changeColor(e) {
   activeColor = e.target.style.backgroundColor;
 }
 
-function setIsClickedOn() {
-  isClicked = true;
-}
+// function setIsClickedOn() {
+//   isClicked = true;
+// }
 
 function setIsClickedOff() {
   isClicked = false;
@@ -65,6 +65,7 @@ function checkIfClicked(e) {
 
 function fillColor(e) {
   e.target.style.backgroundColor = activeColor;
+  isClicked = true;
 }
 
 function getClearButton() {
